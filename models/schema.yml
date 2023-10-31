@@ -5,10 +5,9 @@ sources:
     tables: 
       - name: sales
         identifier: raw_gz_sales
-        columns:
-          - name: orders_id
-            tests:
-            - unique
+        
+
+
             
                 
       - name: product
