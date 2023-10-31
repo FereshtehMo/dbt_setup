@@ -23,13 +23,8 @@ renamed as (
 
 select * from renamed
 
-diff_check as (
-    select
-        orders_id,
-        shipping_fee,
-        shipping_fee_1
-    from renamed
-    where shipping_fee <> shipping_fee_1
+
+    where shipping_fee != shipping_fee_1
     limit 10 -- limiting to preview first 10 rows if there are differences
 )
 
