@@ -17,9 +17,9 @@ renamed as (
 
     from source
 
-)
 
-where shipping_fee != shipping_fee_1
+
+where shipping_fee != shipping_fee_1)
  
 select * from renamed
 
