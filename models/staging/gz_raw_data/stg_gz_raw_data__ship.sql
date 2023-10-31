@@ -19,4 +19,8 @@ renamed as (
 
 )
 
+where shipping_fee != shipping_fee_1
+ 
 select * from renamed
+
+ 
