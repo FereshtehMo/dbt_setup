@@ -1,6 +1,6 @@
 with 
 
-source as ( 
+source as (
 
     select * from {{ source('gz_raw_data', 'ship') }}
 
@@ -18,8 +18,6 @@ renamed as (
     from source
 
 )
-
+WHERE 
+    shipping_feea <> shipping_fee_1 
 select * from renamed
-
-
-
