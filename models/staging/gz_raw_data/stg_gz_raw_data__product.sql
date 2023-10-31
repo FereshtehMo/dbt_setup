@@ -1,14 +1,19 @@
-with source as (
-    select * from {{ source('gz_raw_data', 'sales') }}
+with 
+
+source as (
+
+    select * from {{ source('gz_raw_data', 'product') }}
+
 ),
+
 renamed as (
+
     select
-        date_date,
-        orders_id,
-        pdt_id AS products_id,  -- Renaming syntax
-        CONCAT(orders_id, '_', pdt_id) AS unique_primary_key,  -- Concatenating orders_id and products_id
-        revenue,
-        quantity
+        products_id,
+        purchse_price AS purchse_price,
+
     from source
+
 )
+
 select * from renamed
