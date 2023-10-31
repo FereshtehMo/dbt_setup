@@ -2,12 +2,12 @@ version: 2
 
 sources:
   - name: raw
-    database: LeWagon-SQL-Fereshteh-1E  # Replace with the actual name of your database if known.
+    database: LeWagon-SQL-Fereshteh-1  # Replace with the actual name of your database if known.
     schema: gz_raw_data    # Replace with the actual name of your schema if known.
     tables:
-      - name: raw_gz_sales
-        identifier: sales
-      - name: raw_gz_product
-        identifier: product
-      - name: raw_gz_ship
-        identifier: ship
+      - name: sales
+        identifier: raw_gz_sales
+      - name: product
+        identifier: raw_gz_product
+      - name: ship
+        identifier: raw_gz_ship
