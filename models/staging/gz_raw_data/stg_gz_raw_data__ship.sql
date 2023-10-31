@@ -6,8 +6,6 @@ source as (
 
 ),
 
-
-
 renamed as (
 
     select
@@ -22,11 +20,3 @@ renamed as (
 )
 
 select * from renamed
-
-
-    where shipping_fee != shipping_fee_1
-    limit 10 -- limiting to preview first 10 rows if there are differences
-)
-
-select * from diff_check; -- this will show rows where shipping_fee and shipping_fee_1 are different
- 
