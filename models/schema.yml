@@ -34,4 +34,3 @@ models:
         count: 90
         period: day
     loaded_at_field: "CAST(your_timestamp_column_here AS TIMESTAMP)"
-R
