@@ -25,12 +25,4 @@ sources:
         
 
         
-models:
-  - name: sales
-    description: "This is the sales table."
-    
-    freshness:
-      warn_after:
-        count: 90
-        period: day
-    loaded_at_field: "CAST(your_timestamp_column_here AS TIMESTAMP)"
+
