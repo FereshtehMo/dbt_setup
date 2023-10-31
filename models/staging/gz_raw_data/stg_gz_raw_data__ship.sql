@@ -11,8 +11,8 @@ renamed as (
         logcost,
         ship_cost
     from source
+    where shipping_fee != shipping_fee_1  -- placing the WHERE clause here
 )
 
 select * 
 from renamed
-where shipping_fee != shipping_fee_1;  -- placing the WHERE clause here
