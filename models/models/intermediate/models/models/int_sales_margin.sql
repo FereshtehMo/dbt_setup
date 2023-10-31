@@ -5,14 +5,14 @@ WITH sales_data AS (
         date_date,
         quantity, 
         revenue 
-    FROM {{ source('stg_gz_raw_data__sales') }}
+    FROM {{ source('gz_raw_data', 'sales') }}  -- Corrected this line
 ),
 
 product_data AS (
     SELECT 
         products_id, 
         purchase_price
-    FROM {{ source('stg_gz_raw_data__product') }}
+    FROM {{ source('gz_raw_data', 'product') }}  -- Corrected this line
 )
 
 SELECT 
