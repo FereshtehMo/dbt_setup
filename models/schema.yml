@@ -51,4 +51,16 @@ sources:
           - name: ship_cost
             description: the shipping cost paid by the carrier/transporter
 
-            
+
+#dd Marketing Campaign Data     
+
+  - name: gz_raw_data_dbt
+    tables:
+      - name: raw_gz_adwords
+        description: 'Data from AdWords advertising campaigns.'
+      - name: raw_gz_bing
+        description: 'Data from Bing advertising campaigns.'
+      - name: raw_gz_criteo
+        description: 'Data from Criteo advertising campaigns.'
+      - name: raw_gz_facebook
+        description: 'Data from Facebook advertising campaigns.'
