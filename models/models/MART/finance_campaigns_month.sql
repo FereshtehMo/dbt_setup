@@ -7,5 +7,5 @@ SELECT
         -- Add other aggregations here as required (e.g., average_basket)
     FROM {{ ref('int_campaigns') }}
     GROUP BY datemonth
-)
+
     ORDER BY datemonth

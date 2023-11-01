@@ -67,17 +67,6 @@ sources:
 
      
 
-  - name: int_campaigns_day
-    description: "A daily aggregated view of the int_campaigns data."
-    columns:
-      - name: date_date
-        description: "Date of the aggregated campaign data entry."
-        tests:
-          - not_null
-      - name: total_ads_cost
-        description: "Total ad costs for the day."
-        tests:
-          - not_null
 
 
    
