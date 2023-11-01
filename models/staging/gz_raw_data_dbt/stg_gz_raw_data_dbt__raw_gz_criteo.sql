@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('gz_raw_data_dbt', 'raw_gz_criteo') }}
+    select * from {{ source('gz_raw_data', 'raw_gz_criteo') }}
 
 ),
 
