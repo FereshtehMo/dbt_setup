@@ -8,7 +8,7 @@ renamed as (
     select
         orders_id,
         shipping_fee, -- keeping only this column
-        logcost,
+        log_cost,
         ship_cost
     from source
 )

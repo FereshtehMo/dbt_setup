@@ -1,23 +1,16 @@
-with 
+WITH source AS (
+    SELECT * 
+    FROM {{ source('raw', 'sales') }}
+),
 
-
-source as (
-
-    select * from {{ source('raw', 'sales') }}
-
-)
-
-renamed as (
-
-    select
+renamed AS (
+    SELECT
         date_date,
         orders_id,
-        pdt_id AS products_id,
+        pdt_id AS product_id, -- Keeping it consistent
         revenue,
         quantity
-
-    from source
-
+    FROM source
 )
 
-select * from renamed
+SELECT * FROM renamed;
