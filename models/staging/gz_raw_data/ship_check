@@ -1,0 +1,8 @@
+SELECT 
+    shipping_fee, 
+    shipping_fee_1 
+FROM 
+    {{ source('gz_raw_data', 'ship') }}
+WHERE 
+    shipping_fee <> shipping_fee_1 
+LIMIT 10; -- to preview only the first
