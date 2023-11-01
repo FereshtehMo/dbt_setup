@@ -29,6 +29,12 @@ sources:
             description: primary key of the table
           - name: purchase_price
             description: the purchase price of the product
+            columns:
+          - name: products_id
+            description: Primary key of the table
+            tests:
+             - unique
+              - not_null
 
       # Generate model
       - name: ship
