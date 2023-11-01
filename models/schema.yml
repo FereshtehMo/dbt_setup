@@ -54,8 +54,8 @@ sources:
 
 #dd Marketing Campaign Data     
 
-  - name: gz_raw_data
-    tables:
+  
+    
       - name: raw_gz_adwords
         description: 'Data from AdWords advertising campaigns.'
       - name: raw_gz_bing

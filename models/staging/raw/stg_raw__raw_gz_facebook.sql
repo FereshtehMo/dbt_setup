@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('gz_raw_data', 'raw_gz_facebook') }}
+    select * from {{ source('raw', 'raw_gz_facebook') }}
 
 ),
 
@@ -13,7 +13,7 @@ renamed as (
         paid_source,
         campaign_key,
         campgn_name AS Campaign_name,
-        CAST (ads_cost AS float64),
+        CAST (ads_cost AS float64) AS ads_cost,
         impression,
         click
 
