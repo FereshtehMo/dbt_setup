@@ -28,17 +28,12 @@ sources:
         columns:
           - name: products_id
             description: primary key of the table
-          - name: purchse_price
-            description: the purchase price of the product
-          
-      - name: product_tests
-        columns:
-          - name: products_id
-            description: Primary key of the table
             tests:
               - unique
               - not_null
-
+          - name: purchse_price
+            description: the purchase price of the product
+          
       # Generate model
       - name: ship
         identifier: raw_gz_ship
@@ -46,17 +41,14 @@ sources:
         columns:
           - name: orders_id
             description: primary key of the table
+            tests:
+              - unique
+              - not_null
           - name: shipping_fee
             description: the price the customer pays for shipping
           - name: log_cost
             description: the cost of preparing the parcel in the warehouse
           - name: ship_cost
             description: the shipping cost paid by the carrier/transporter
-          
-      - name: ship_tests
-        columns:
-          - name: orders_id
-            description: Primary key of the table
-            tests:
-              - unique
-              - not_null
+
+            
