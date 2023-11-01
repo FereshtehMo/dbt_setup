@@ -29,11 +29,13 @@ sources:
             description: primary key of the table
           - name: purchase_price
             description: the purchase price of the product
-            columns:
+          
+      - name: product_tests
+        columns:
           - name: products_id
             description: Primary key of the table
             tests:
-             - unique
+              - unique
               - not_null
 
       # Generate model
@@ -49,3 +51,11 @@ sources:
             description: the cost of preparing the parcel in the warehouse
           - name: ship_cost
             description: the shipping cost paid by the carrier/transporter
+          
+      - name: ship_tests
+        columns:
+          - name: orders_id
+            description: Primary key of the table
+            tests:
+              - unique
+              - not_null
