@@ -1,23 +1,4 @@
-with 
-
-source as (
-
-    select * from {{ source('raw', 'product') }}
-
-),
-
-renamed as (
-
-    select
-        products_id,
-        purchse_price AS purchse_price,
-
-    from source
-
-)
-
-select * from renamed
-WITH source AS (
+WITH raw_source AS (
     SELECT * 
     FROM {{ source('raw', 'product') }}
 ),
@@ -25,8 +6,8 @@ WITH source AS (
 renamed AS (
     SELECT
         products_id,
-        purchase_price  -- corrected typo here
-    FROM source
+        purchase_price AS purchase_price_corrected
+    FROM raw_source
 )
 
 SELECT * FROM renamed;
